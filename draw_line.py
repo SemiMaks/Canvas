@@ -11,9 +11,13 @@ class MyGUI:
         self.canvas = tkinter.Canvas(self.main_window,
                                      width=200, height=200)
 
+        point = (10, 10, 189, 10, 100, 189, 10, 10)
+        self.canvas.create_line(point)
+
         # Нарисовать две прямые.
-        self.canvas.create_line(0, 0, 199, 199)
-        self.canvas.create_line(199, 0, 0, 199)
+        self.canvas.create_line(0, 0, 199, 199, arrow=tkinter.LAST)
+        self.canvas.create_line(199, 0, 0, 199, arrow=tkinter.FIRST)
+        self.canvas.create_line(100, 0, 100, 200, arrow=tkinter.BOTH)
 
         # Упаковать холст.
         self.canvas.pack()
