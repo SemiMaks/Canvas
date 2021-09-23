@@ -18,6 +18,7 @@ class MyGUI:
         self.canvas.create_line(0, 0, 199, 199, arrow=tkinter.LAST)
         self.canvas.create_line(199, 0, 0, 199, arrow=tkinter.FIRST)
         self.canvas.create_line(100, 0, 100, 200, arrow=tkinter.BOTH)
+        self.canvas.create_line(50, 0, 50, 200, dash=(5, 2), fill='red', smooth=True, width=5)
 
         # Упаковать холст.
         self.canvas.pack()
